@@ -815,7 +815,7 @@
 
             // Render headers (remplacer CPR par Actions)
             const displayHeaders = headers.map((h, idx) => 
-                idx === cprColumnIndex ? 'Actions' : h
+                idx === cprColumnIndex ? 'CPR' : h
             );
             tableHead.innerHTML = '<tr>' + displayHeaders.map(h => `<th>${h}</th>`).join('') + '</tr>';
 
@@ -1755,4 +1755,5 @@
     </script>
 </body>
 </html>
+
 
