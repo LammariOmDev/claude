@@ -189,6 +189,9 @@
         .table-container {
             padding: 30px;
             overflow-x: auto;
+            max-height: calc(100vh - 500px);
+            overflow-y: auto;
+            position: relative;
         }
 
         table {
@@ -202,7 +205,7 @@
             color: white;
             position: sticky;
             top: 0;
-            z-index: 10;
+            z-index: 100;
         }
 
         th {
@@ -212,6 +215,7 @@
             text-transform: uppercase;
             letter-spacing: 0.5px;
             font-size: 12px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         tbody tr {
@@ -811,7 +815,7 @@
 
             // Render headers (remplacer CPR par Actions)
             const displayHeaders = headers.map((h, idx) => 
-                idx === cprColumnIndex ? 'CPR' : h
+                idx === cprColumnIndex ? 'Actions' : h
             );
             tableHead.innerHTML = '<tr>' + displayHeaders.map(h => `<th>${h}</th>`).join('') + '</tr>';
 
