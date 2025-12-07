@@ -813,9 +813,9 @@
             noData.style.display = 'none';
             pagination.style.display = 'flex';
 
-            // Render headers (remplacer CPR par Actions)
+            // Render headers (remplacer CPR par Conditions)
             const displayHeaders = headers.map((h, idx) => 
-                idx === cprColumnIndex ? 'CPR' : h
+                idx === cprColumnIndex ? 'Conditions' : h
             );
             tableHead.innerHTML = '<tr>' + displayHeaders.map(h => `<th>${h}</th>`).join('') + '</tr>';
 
@@ -1755,5 +1755,6 @@
     </script>
 </body>
 </html>
+
 
 
